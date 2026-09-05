@@ -1,4 +1,15 @@
-# planning session
+# planning sessions
+
+5 Sep 2026
+
+## AI Plan
+Using local Qwen for interpretation instead of OpenAI API to avoid external dependencies during grading.
+
+## Definition of Done
+- Features are fully implemented and tested.
+- Code is reviewed by a peer and merged.
+- CI passes (GitHub Actions test suite runs green).
+- No technical debt is left unaddressed in that PR.
 
 2 Sep 2026
 
