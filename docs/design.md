@@ -22,6 +22,7 @@ The document will evolve with implementation and does not block unrelated coding
     - holds data about the card, including name, suit, rank, art, details, etc.
     - has getters to allow Session to retreive data about the card
 
+### dataflow diagram
 ==================================================================================
          +──────────────────────────────────────────────────────────────────────+
          |                              USER TERMINAL                           |
@@ -53,6 +54,152 @@ The document will evolve with implementation and does not block unrelated coding
 ==================================================================================
 
 ## User interface design: mock-ups, expected interactions/workflows
+
+### example UI: main menu
+==================================================================================
+========================================================================
+                     TAROT CLI v1.0
+========================================================================
+Welcome.
+
+Available Commands:
+  [new]     Start a new session
+  [review]  Review past sessions
+  [help]    Show usage guidance
+  [exit]    Close the application
+
+> review
+[!] No saved sessions found. Please start a new session first.
+
+> help
+Usage Guidance:
+  - Type 'new' to set an intention and begin drawing up to 3 cards.
+  - Type 'details [card_name]' during a session to read about its symbolism.
+  - Type 'reset' at any time to clear the current state.
+
+>
+==================================================================================
+
+### example UI: starting a new session and drawing cards
+==================================================================================
+> new
+Enter your intention or question for this session:
+> Will my upcoming software launch go smoothly?
+
+[Session Initialized]
+------------------------------------------------------------------------
+Current Spread:
+------------------------------------------------------------------------
+Available Commands: [draw], [save], [reset], [help]
+
+> draw
+
+Drawing card...
+------------------------------------------------------------------------
+Current Spread: [ The Tower ]
+------------------------------------------------------------------------
+The Tower represents sudden upheaval and disruption. In the context of
+your software launch, it warns of unexpected technical debt or critical
+bugs crashing your production deployment. Prepare mitigation plans.
+
+> draw
+
+Drawing card...
+------------------------------------------------------------------------
+Current Spread: [ The Tower ] -> [ Three of Wands ]
+------------------------------------------------------------------------
+The Three of Wands shifting after The Tower shows forward planning.
+While your initial launch window experiences an outage, your team will
+rapidly look out toward broader horizons, successfully deploying a stable
+architecture immediately after the initial storm.
+
+> details The Tower
+------------------------------------------------------------------------
+CARD DETAILS: The Tower
+Motifs: A lightning-struck fortress, crown falling, figures plunging.
+Meaning: Fundamental breakdowns, sudden revelation, destruction of
+         faulty foundations to make way for stable structures.
+------------------------------------------------------------------------
+==================================================================================
+
+### example UI: third card and final interpretation
+==================================================================================
+> draw
+
+Drawing card...
+------------------------------------------------------------------------
+Current Spread: [ The Tower ] -> [ Three of Wands ] -> [ The World ]
+------------------------------------------------------------------------
+The World signifies completion, triumph, and harmony. The immediate
+hurdles of your launch yield an ultimately perfect deployment.
+
+FINAL INTERPRETATION:
+Your journey begins with sudden, sharp technical disruptions (The Tower).
+However, by looking outward and executing a structured expansion plan
+(Three of Wands), your software project will achieve global success and
+complete fulfillment (The World). The launch will be chaotic at first,
+but an absolute victory in the end.
+------------------------------------------------------------------------
+Available Commands: [save], [reset], [exit]
+
+> draw
+[!] You have drawn the maximum limit of 3 cards.
+Available Commands: [save], [reset], [exit]
+
+> save
+Session successfully saved to disk. Returning to Main Menu...
+
+========================================================================
+                     TAROT CLI v1.0
+========================================================================
+Welcome.
+
+Available Commands:
+  [new]     Start a new session
+  [review]  Review past sessions
+  [load]    Load a past session
+  [help]    Show usage guidance
+  [exit]    Close the application
+
+>
+==================================================================================
+
+### example UI: mid-session reset
+=> new
+Enter your intention or question for this session:
+> Should I relocate to a new city?
+
+> draw
+
+Drawing card...
+------------------------------------------------------------------------
+Current Spread: [ Six of Swords ]
+------------------------------------------------------------------------
+The Six of Swords is a highly literal and encouraging sign for relocation. The
+imagery of the ferryman carrying passengers away from a choppy past matches
+your desire to move. It suggests that while leaving your current environment
+might bring a tinge of sadness or nostalgia, the journey across the water is
+essential for your mental peace. The destination promises much calmer, more
+supportive conditions.
+
+> reset
+Are you sure you want to reset? Unsaved progress will be lost. (y/n): y
+Session cleared. Returning to Main Menu...
+
+========================================================================
+                     TAROT CLI v1.0
+========================================================================
+Welcome.
+
+Available Commands:
+  [new]     Start a new session
+  [review]  Review past sessions
+  [load]    Load a past session
+  [help]    Show usage guidance
+  [exit]    Close the application
+
+>
+==================================================================================
 
 User starts the application.
 User is greeted and prompted to load, review, or start a new session.
