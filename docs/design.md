@@ -23,8 +23,34 @@
 ## User interface design: mock-ups, expected interactions/workflows
 
 User starts the application.
-User can use the help command to get usage guidance
-User is greeted and prompted to load, review, or start a new session
+User is greeted and prompted to load, review, or start a new session.
+If the user reviews a session, they will be shown the question, timestamp, cards drawn,
+and all 4 interpretation statements for that session.
+If there is no session to load/review but the user attempts to load/review,
+they will be shown a fallback message.
+At any time, the user may shuffle/reset. If they have set an intention/question, they will
+be asked if they would like to save the session before the session is reset:
+"Are you sure you want to reset? Unsaved progress will be lost."
+At any time, user can use the help command to get usage guidance
+The user may not review a session while they are currently in a session. They must
+shuffle/reset before they can review other sessions.
+When user starts a new session, they are prompted to submit an intention/question.
+At any time after submitting their intention/question, the user may save the session.
+When user has submitted their intention/question, they may start drawing cards.
+When user draws a card, they are shown the names of the cards they've drawn, in
+order of earliest to latest, from left to right. They are also shown an
+interpretation of the card as it relates to the question and the other cards
+they've drawn this session.
+If user has drawn at least one card, they may request to see details or art of any of the
+drawn cards.
+If the user requests to see details of one of the drawn cards, they will be shown a
+statement explaining major motifs depicted on the card and their meanings independent of
+the session and question.
+When the user draws their third card, they will be shown two interpretations: the standard
+interpretation of that card as mentioned above, and a final, overarching interpretation
+that takes the question and all three cards and their order into context.
+If user has already drawn three cards, they will not be allowed to draw another card.
+They will have the option to save, after which they will be brought back to the main menu.
 
 ## design decisions or tradeoffs
 
