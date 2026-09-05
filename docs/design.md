@@ -1,5 +1,7 @@
 # Design
 
+The document will evolve with implementation and does not block unrelated coding.
+
 ## System architecture: major classes/modules, their responsibilities and interactions
 
 ### classes
@@ -19,6 +21,36 @@
 - Card
     - holds data about the card, including name, suit, rank, art, details, etc.
     - has getters to allow Session to retreive data about the card
+
+==================================================================================
+         +──────────────────────────────────────────────────────────────────────+
+         |                              USER TERMINAL                           |
+         +──────────────────────────────────────────────────────────────────────+
+                                                                          ^   |
++────────────────────────+             1. requests random, unique ID/Key  |   |
+|         DECK           | <──────────────────────────────────────────+   |   |
+| - tracks drawn IDs     |                                            │   |   |
+| - handles shuffle      | 2. returns unique ID (e.g., "the-tower")   │   |   |
++────────────────────────+                                            │   |   |
+                                                                      v   |   v
+                                                            +────────────────────+
+                                                            |       SESSION      |
+                                                            | - holds user state |
++────────────────────────+                                  | - queries LLM      |
+|          CARD          | 3. fetches details by drawn ID   | - renders the UI   |
+| - name, suit, rank, etc| ────────────────────────────────>|                    |
++────────────────────────+                                  +────────────────────+
+           ^                                                         ^  |
+           |                                                         |  |
++────────────────────────+                                           |  |
+|       cards.json       |                                           |  |
++────────────────────────+                                           |  v
+                                                        +────────────────────────+
+                                                        |       LOCAL LLM        |
+                                                        |     - takes question   |
+                                                        |     - inteprets cards  |
+                                                        +────────────────────────+
+==================================================================================
 
 ## User interface design: mock-ups, expected interactions/workflows
 
@@ -53,6 +85,45 @@ If user has already drawn three cards, they will not be allowed to draw another 
 They will have the option to save, after which they will be brought back to the main menu.
 
 ## design decisions or tradeoffs
+
+### motivation
+
+We needed to decide where to store data about cards
+
+### solution 1
+
+held in Deck
+
+pros:
+- no I/O dependency
+- everything is done in source files, no need for extra asset files
+
+cons:
+- Violates single responsibility principle: Deck becomes both a database and state handler
+- loading a big object full of static data every time is inefficient
+
+### solution 2
+
+stored in JSON database
+
+pros:
+- easy serialization for saving/loading cards
+- the cards can easily be edited or added to directly without touching application source.
+- easier interop with LLM via JSON (consistent with save/load as well)
+
+cons:
+- more reads from disk
+- need to write exception handling for cases with missing or corrupted cards.json
+
+### decision
+
+We decided to go with solution 2. Since these card properties are permanent and static,
+there's no reason to bloat a dynamic object with that data. We can use Card as a DTO to
+deliver card data to the rest of the application.
+
+### test plan
+
+an end-to-end test
 
 ### motivation
 
