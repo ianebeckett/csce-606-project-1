@@ -90,7 +90,8 @@ Enter your intention or question for this session:
 ------------------------------------------------------------------------
 Current Spread:
 ------------------------------------------------------------------------
-Available Commands: [draw], [save], [reset], [help]
+
+Available Commands: [draw], [details <card>], [save], [reset], [help], [exit]
 
 > draw
 
@@ -102,6 +103,8 @@ The Tower represents sudden upheaval and disruption. In the context of
 your software launch, it warns of unexpected technical debt or critical
 bugs crashing your production deployment. Prepare mitigation plans.
 
+Available Commands: [draw], [details <card>], [save], [reset], [help], [exit]
+
 > draw
 
 Drawing card...
@@ -112,6 +115,8 @@ The Three of Wands shifting after The Tower shows forward planning.
 While your initial launch window experiences an outage, your team will
 rapidly look out toward broader horizons, successfully deploying a stable
 architecture immediately after the initial storm.
+
+Available Commands: [draw], [details <card>], [save], [reset], [help], [exit]
 
 > details The Tower
 ------------------------------------------------------------------------
@@ -140,11 +145,13 @@ However, by looking outward and executing a structured expansion plan
 complete fulfillment (The World). The launch will be chaotic at first,
 but an absolute victory in the end.
 ------------------------------------------------------------------------
-Available Commands: [save], [reset], [exit]
+
+Available Commands: [draw], [details <card>], [save], [reset], [help], [exit]
 
 > draw
 [!] You have drawn the maximum limit of 3 cards.
-Available Commands: [save], [reset], [exit]
+
+Available Commands: [details <card>], [save], [reset], [help], [exit]
 
 > save
 Session successfully saved to disk. Returning to Main Menu...
@@ -168,6 +175,13 @@ Available Commands:
 => new
 Enter your intention or question for this session:
 > Should I relocate to a new city?
+
+[Session Initialized]
+------------------------------------------------------------------------
+Current Spread:
+------------------------------------------------------------------------
+
+Available Commands: [draw], [details <card>], [save], [reset], [help], [exit]
 
 > draw
 
