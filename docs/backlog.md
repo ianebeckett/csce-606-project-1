@@ -1,7 +1,6 @@
 # backlog
 
 ## To Do
-- write user stories for new features in docs/user_stories.md
 - Add explicit "definition of done" for each PR to docs/design.md
 - Add story points to each story or feature
 - Add Architecture diagram or brief module explanation in docs/design.md (currently minimal)
@@ -47,6 +46,7 @@
 - define features and scope for project approval
 
 ## Done
+- align user stories and acceptance criteria in docs/user_stories.md
 - Setup GitHub Actions for running tests
 - peform one (1) planning session and document in docs/planning.md
 - plan scope to get project approval
