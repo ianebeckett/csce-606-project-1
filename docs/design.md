@@ -306,7 +306,8 @@ draw a random card would be tracked by the Deck or Session class.
 Session tracks state
 
 pros:
-- Deck stays stateless and is just used to deliver cards to the Session
+- State management is easier. 
+Deck stays stateless since it just used to deliver cards to the Session, so we don't need to do one to one mapping for Deck and Session.
 - We wouldn't need to use a getter method e.g. `d = Deck, d.getDrawnCards` to save,
 making saving and loading simpler
 - If deck were stateless, that would decouple the lifecycles of the Session and Deck
