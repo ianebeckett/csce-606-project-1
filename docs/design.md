@@ -270,30 +270,17 @@ pros:
 
 cons:
 - Violates single responsibility principle: Deck becomes both a database and state handler
-<<<<<<< Updated upstream
 - loading a big object full of static data when doing initialization every time is inefficient
-||||||| Stash base
-- loading a big object full of static data every time is inefficient
-=======
-- loading a big object full of static data every time is inefficient
 - messy code structure: we would have over 70 rows of just static card data in Deck class
->>>>>>> Stashed changes
 
 ### solution 2
 
 stored in JSON database
 
 pros:
-<<<<<<< Updated upstream
-- easy serialization for saving/loading cards
-||||||| Stash base
 - easy serialization for saving/loading cards
 - the cards can easily be edited or added to directly without touching application source.
-- easier interop with LLM via JSON (consistent with save/load as well)
-=======
 - looks more clean
-- the cards can easily be edited or added to directly without touching application source.
->>>>>>> Stashed changes
 
 cons:
 - more reads from disk
