@@ -277,7 +277,7 @@ held in Deck
 
 #### solution 2
 
-stored in JSON database
+stored in JSON file(s)
 
 ##### pros:
 - easy serialization for saving/loading cards
@@ -394,6 +394,45 @@ of taking the user's intention/question and using that for context to interpret
 "divine" the meanings of the cards. This facilitates runnning a small model
 locally so that we don't have to deal the networking issues of using e.g.
 OpenAI API.
+
+#### test plan
+
+an end-to-end test
+
+### design decision 4
+
+#### motivation
+
+We need to decide whether to store tarot cards in one JSON file or in separate files.
+
+#### solution 1
+
+Store cards JSON in one file
+
+##### pros:
+- easier to edit all cards at once --e.g. adding a field-- since
+cards are all in one file.
+- lower I/O overhead
+
+##### cons:
+- entire deck is in application memory. Could become cumbersome if we add lots of stuff
+  to each card.
+
+#### solution 2
+
+Store cards JSON in individual files
+
+##### pros:
+- more granular commit history when editing specific cards
+- smaller amount of text to look at while editing
+
+##### cons:
+- higher I/O overhead
+- lots of small files
+
+#### decision
+
+TBD
 
 #### test plan
 
