@@ -279,7 +279,7 @@ stored in JSON database
 
 pros:
 - easy serialization for saving/loading cards
-- the cards can easily be edited or added to directly without touching application source.
+- the cards can easily be edited or added to directly without touching application source. (if there's a bug)
 - looks more clean
 
 cons:
