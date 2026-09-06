@@ -322,7 +322,7 @@ pros:
 - Separation of concerns: Session handles workflow and LLM interaction, while deck handles
   drawing and shuffling cards
 - lazy evaluation of cards allows us to only track drawn cards
-- easier testing
+- smaller class is easier for testing
 
 cons:
 - Session has to interact with deck in order to save/load session or shuffle the deck
