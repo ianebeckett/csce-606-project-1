@@ -256,57 +256,61 @@ They will have the option to save, after which they will be brought back to the 
 
 ## design decisions or tradeoffs
 
-### design decision 1 motivation
+### design decision 1
+
+#### motivation
 
 We needed to decide where to store data about cards
 
-### solution 1
+#### solution 1
 
 held in Deck
 
-pros:
+##### pros:
 - no I/O dependency
 - everything is done in source files, no need for extra asset files
 
-cons:
+##### cons:
 - Violates single responsibility principle: Deck becomes both a database and state handler
 - loading a big object full of static data when doing initialization every time is inefficient
 - messy code structure: we would have over 70 rows of just static card data in Deck class
 
-### solution 2
+#### solution 2
 
 stored in JSON database
 
-pros:
+##### pros:
 - easy serialization for saving/loading cards
 - the cards can easily be edited or added to directly without touching application source. (if there's a bug)
 - looks more clean
 
-cons:
+##### cons:
 - more reads from disk
 - need to write exception handling for cases with missing or corrupted cards.json
 
-### decision
+#### decision
 
 We decided to go with solution 2. Since these card properties are permanent and static,
 there's no reason to bloat a dynamic object with that data. We can use Card as a DTO to
 deliver card data to the rest of the application.
 
-### test plan
+#### test plan
 
 an end-to-end test
 
-### design decision 2 motivation
+### design decision
+
+#### motivation
 
 We needed to decide whether the status of which cards were drawn and how to
 draw a random card would be tracked by the Deck or Session class.
 
-### solution 1
+#### solution 1
 
 Session tracks state
 
-pros:
-- State management is easier. 
+##### pros:
+- State management is easier.
 Deck stays stateless since it just used to deliver cards to the Session, so we don't need to do one to one mapping for Deck and Session.
 - We wouldn't need to use a getter method e.g. `d = Deck, d.getDrawnCards` to save,
 making saving and loading simpler
@@ -314,24 +318,24 @@ making saving and loading simpler
 objects, potentially allowing us to extend the application by having multiple decks in
 a sesssion.
 
-cons:
+##### cons:
 - Violates single responsibility principle: Session will become a god object
 - Harder to test features in isolation
 
-### solution 2
+#### solution 2
 
 Deck tracks state
 
-pros:
+##### pros:
 - Separation of concerns: Session handles workflow and LLM interaction, while deck handles
   drawing and shuffling cards
 - lazy evaluation of cards allows us to only track drawn cards
 - smaller class is easier for testing
 
-cons:
+##### cons:
 - Session has to interact with `Deck` in order to save/load session or shuffle the deck
 
-### decision
+#### decision
 
 We decided to go with solution 2. Since the user isn't concerned with the cards that
 haven't been drawn, we don't need to do anything with them. By ensuring that cards are
@@ -341,11 +345,13 @@ identical to shuffling the deck and drawing the top card. We should be able to h
  the communication between Deck and Session by having methods in deck that can export and
 import states to/from Session.
 
-### test plan
+#### test plan
 
 an end-to-end test
 
-### design decision 3 motivation
+### design decision 3
+
+#### motivation
 
 In order to have a project with a wider scope, we decided to add LLM
 integration to act as a fortune teller or tarot card interpreter for the user.
@@ -353,15 +359,15 @@ That way, the user could just read the interpretations instead of having to
 study themselves the esoteric meanings of the cards and how they relate to the
 question/intent they had in mind.
 
-### solution 1
+#### solution 1
 
 Use LLM functionality for divining the user's question/intent, drawing the
 cards, and interpreting the meanings of the cards.
 
-pros:
+##### pros:
 - less source code requred on our end
 
-cons:
+##### cons:
 - the LLM might make a mistake and draw the same card twice.
 - the LLM might be influenced by the user's statement of intent to perform an action we
 didn't intend.
@@ -369,19 +375,19 @@ didn't intend.
 This seems risky.
 - security: probably a greater risk of prompt injection
 
-### solution 2
+#### solution 2
 
 Use LLM functionality only for divining the user's question/intent based on the cards
 drawn.
 
-pros:
+##### pros:
 - more secure: there's less of a risk of prompt injection or saving unsafe data to disk
 - deterministic control over the deck; we can ensure the same card isn't drawn twice
 
-cons:
+##### cons:
 - need to implement the deck, card draw, etc. in the source code
 
-### decision
+#### decision
 
 We decided on solution 2: integrate LLM API functionality only for the feature
 of taking the user's intention/question and using that for context to interpret
@@ -389,7 +395,7 @@ of taking the user's intention/question and using that for context to interpret
 locally so that we don't have to deal the networking issues of using e.g.
 OpenAI API.
 
-### test plan
+#### test plan
 
 an end-to-end test
 
