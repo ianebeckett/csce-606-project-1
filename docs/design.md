@@ -410,13 +410,14 @@ We need to decide whether to store tarot cards in one JSON file or in separate f
 Store cards JSON in one file
 
 ##### pros:
+- It's simpler to write application code to get an object from a JSON list than it is to
+  dynamically build a filepath string and check for a file, handle errors, etc.
 - easier to edit all cards at once --e.g. adding a field-- since
 cards are all in one file.
 - lower I/O overhead
 
 ##### cons:
-- entire deck is in application memory. Could become cumbersome if we add lots of stuff
-  to each card.
+- lots of text to look at in one file
 
 #### solution 2
 
@@ -427,6 +428,7 @@ Store cards JSON in individual files
 - smaller amount of text to look at while editing
 
 ##### cons:
+- drawing cards would involve dynamically building filepath strings. Overcomplicated.
 - higher I/O overhead
 - lots of small files
 
