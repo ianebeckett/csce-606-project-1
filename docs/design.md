@@ -307,7 +307,7 @@ Session tracks state
 
 pros:
 - Deck stays stateless and is just used to deliver cards to the Session
-- We wouldn't need to use a getter method e.g. `Deck.getDrawnCards` to save,
+- We wouldn't need to use a getter method e.g. `d = Deck, d.getDrawnCards` to save,
 making saving and loading simpler
 
 cons:
