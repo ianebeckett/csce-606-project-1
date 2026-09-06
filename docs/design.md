@@ -309,6 +309,9 @@ pros:
 - Deck stays stateless and is just used to deliver cards to the Session
 - We wouldn't need to use a getter method e.g. `d = Deck, d.getDrawnCards` to save,
 making saving and loading simpler
+- If deck were stateless, that would decouple the lifecycles of the Session and Deck
+objects, potentially allowing us to extend the application by having multiple decks in
+a sesssion.
 
 cons:
 - Violates single responsibility principle: Session will become a god object
@@ -355,7 +358,7 @@ Use LLM functionality for divining the user's question/intent, drawing the
 cards, and interpreting the meanings of the cards.
 
 pros:
-- cless source code requred on our end
+- less source code requred on our end
 
 cons:
 - the LLM might make a mistake and draw the same card twice.
