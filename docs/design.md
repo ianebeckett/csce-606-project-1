@@ -278,8 +278,6 @@ stored in JSON database
 
 pros:
 - easy serialization for saving/loading cards
-- the cards can easily be edited or added to directly without touching application source.
-- easier interop with LLM via JSON (consistent with save/load as well)
 
 cons:
 - more reads from disk
