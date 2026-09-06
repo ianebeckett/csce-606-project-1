@@ -270,7 +270,7 @@ pros:
 
 cons:
 - Violates single responsibility principle: Deck becomes both a database and state handler
-- loading a big object full of static data every time is inefficient
+- loading a big object full of static data when doing initialization every time is inefficient
 
 ### solution 2
 
