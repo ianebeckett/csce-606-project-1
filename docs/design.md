@@ -298,7 +298,7 @@ deliver card data to the rest of the application.
 
 an end-to-end test
 
-### design decision
+### design decision 2
 
 #### motivation
 
