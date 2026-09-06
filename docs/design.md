@@ -256,7 +256,7 @@ They will have the option to save, after which they will be brought back to the 
 
 ## design decisions or tradeoffs
 
-### motivation
+### design decision 1 motivation
 
 We needed to decide where to store data about cards
 
@@ -309,7 +309,7 @@ deliver card data to the rest of the application.
 
 an end-to-end test
 
-### motivation
+### design decision 2 motivation
 
 We needed to decide whether the status of which cards were drawn and how to
 draw a random card would be tracked by the Deck or Session class.
@@ -353,7 +353,7 @@ import states to/from Session.
 
 an end-to-end test
 
-### motivation
+### design decision 3 motivation
 
 In order to have a project with a wider scope, we decided to add LLM
 integration to act as a fortune teller or tarot card interpreter for the user.
