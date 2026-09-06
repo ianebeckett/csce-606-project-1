@@ -325,7 +325,7 @@ pros:
 - smaller class is easier for testing
 
 cons:
-- Session has to interact with deck in order to save/load session or shuffle the deck
+- Session has to interact with `Deck` in order to save/load session or shuffle the deck
 
 ### decision
 
