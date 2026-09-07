@@ -49,7 +49,7 @@ The document will evolve with implementation and does not block unrelated coding
 │        cards.json       │                                           │  │
 +─────────────────────────+                                           │  v
                                                         +─────────────────────────+
-                                                        │        LOCAL LLM        │
+                                                        │      LLM PROVIDER       │
                                                         │      - takes question   │
                                                         │      - inteprets cards  │
                                                         +─────────────────────────+
@@ -268,7 +268,7 @@ We needed to decide where to store data about cards
 held in Deck
 
 ##### pros:
-- no I/O dependency
+- keeps card data in memory and avoids separate disk I/O
 - everything is done in source files, no need for extra asset files
 
 ##### cons:
@@ -281,9 +281,7 @@ held in Deck
 stored in JSON file(s)
 
 ##### pros:
-- easy serialization for saving/loading cards
 - the cards can easily be edited or added to directly without touching application source. (if there's a bug)
-- looks more clean
 
 ##### cons:
 - more reads from disk
@@ -291,9 +289,10 @@ stored in JSON file(s)
 
 #### decision
 
-We decided to go with solution 2. Since these card properties are permanent and static,
-there's no reason to bloat a dynamic object with that data. We can use Card as a DTO to
-deliver card data to the rest of the application.
+We decided to go with solution 2:
+
+- Cleaner implementation: `Deck` handles deck state instead of storing card definitions.
+- Better maintainability: card data can change without editing application source.
 
 #### test plan
 
@@ -390,11 +389,17 @@ drawn.
 
 #### decision
 
-We decided on solution 2: integrate LLM API functionality only for the feature
-of taking the user's intention/question and using that for context to interpret
-"divine" the meanings of the cards. This facilitates runnning a small model
-locally so that we don't have to deal the networking issues of using e.g.
-OpenAI API.
+We decided on solution 2: application code controls draws, while the LLM only
+interprets the question and drawn cards.
+
+#### LLM provider tradeoff
+
+- Third-party API, such as OpenAI: potentially stronger models and no local setup,
+  but usage fees and network/API-key dependencies.
+- Local LLM, such as Qwen3.5-0.8B: no per-call fee, can work offline, and small
+  models can run on CPU, but local setup, speed, and output quality need testing.
+
+We plan to use local Qwen; its exact setup will be designed with the LLM feature.
 
 #### test plan
 
@@ -435,9 +440,8 @@ Store cards JSON in individual files
 
 #### decision
 
-TBD
+We chose one JSON file because it avoids per-card paths and file checks.
 
 #### test plan
 
 an end-to-end test
-
