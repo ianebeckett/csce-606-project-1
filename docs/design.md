@@ -397,7 +397,7 @@ interprets the question and drawn cards.
 - Third-party API, such as OpenAI: potentially stronger models and no local setup,
   but usage fees and network/API-key dependencies.
 - Local LLM, such as Qwen3.5-0.8B: no per-call fee, can work offline, and small
-  models can run on CPU, but local setup, speed, and output quality need testing.
+  models can run on CPU, but local setup, speed, and output quality need testing to prove it works.
 
 We plan to use local Qwen; its exact setup will be designed with the LLM feature.
 
