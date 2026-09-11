@@ -5,7 +5,6 @@
 ### Planning and Design
 - design UI for review
 - write database/JSON schema for session
-- write API contract for interaction with local Qwen model
 
 ### Pair Programming
 - Perform one (1) additional pair programming session with alternating roles (2 of 4 required). Document in docs/pairing_log.md
@@ -18,10 +17,6 @@
 - implement load session, allowing tests to inject other filepaths
 - write tests for review
 - implement review
-- write tests for Q&A with Qwen
-- implement Q&A with Qwen
-- write tests for local Qwen integration
-- implement local Qwen integration
 - implement test coverage reports
 
 ### Optional Features - Implementation
@@ -41,6 +36,10 @@
 ## In Progress
 - write tests for usage statement
 - implement and test Shuffle (#14)
+- Write the local Qwen runner API contract (#18; local change awaiting review and merge)
+- Write fake-runner tests for per-draw Q&A timing, cumulative inputs, output, and failure (#18; local change awaiting CI)
+- Implement Q&A with the required local Qwen model (#18; local change awaiting review and merge)
+- Document how to start the required local Qwen server (#18; local change awaiting review and merge)
 
 ## Done
 - write tests for deck

@@ -5,6 +5,12 @@ require 'test_helper'
 require 'tarot_cli/cli'
 
 class ShuffleAcceptanceTest < Minitest::Test
+  class FakeRunner
+    def interpret(question:, cards:)
+      "#{question}: #{cards.map(&:name).join(', ')}"
+    end
+  end
+
   SHUFFLE_FLOW = <<~INPUT
     new
     First question
@@ -38,7 +44,7 @@ class ShuffleAcceptanceTest < Minitest::Test
     original_stdin = $stdin
     $stdin = StringIO.new(input)
     status = nil
-    output, = capture_io { status = TarotCLI::CLI.new.run }
+    output, = capture_io { status = TarotCLI::CLI.new(runner: FakeRunner.new).run }
     [status, output]
   ensure
     $stdin = original_stdin

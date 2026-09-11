@@ -15,6 +15,10 @@ module TarotCLI
         exit, quit        Exit tarot-cli
     TEXT
 
+    def initialize(runner: QwenRunner.new)
+      @runner = runner
+    end
+
     def run(arguments = [])
       unless arguments.empty?
         result = execute(arguments.join(' '))
@@ -53,7 +57,7 @@ module TarotCLI
 
     def start_session
       question = prompt_for_question
-      Session.new(question).run if question
+      Session.new(question, runner: @runner).run if question
     end
 
     def prompt_for_question

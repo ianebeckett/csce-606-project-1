@@ -4,12 +4,20 @@ require 'minitest/autorun'
 require_relative '../../lib/tarot_cli/session'
 
 class SessionDrawTest < Minitest::Test
+  class FakeRunner
+    def interpret(question:, cards:)
+      "#{question}: #{cards.map(&:name).join(', ')}"
+    end
+  end
+
   def setup
     cards = 4.times.map do |index|
       Card.new(id: index + 1, name: "Card #{index + 1}", description: 'Description')
     end
     @deck = Deck.new(cards: cards)
-    capture_io { @session = TarotCLI::Session.new('Question', deck: @deck) }
+    capture_io do
+      @session = TarotCLI::Session.new('Question', deck: @deck, runner: FakeRunner.new)
+    end
   end
 
   def test_fourth_draw_is_rejected_until_shuffle

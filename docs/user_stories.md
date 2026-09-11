@@ -73,16 +73,19 @@ And the program should not crash or freeze.
 
 ### 5. Ask a question and receive an interpretation (#18)
 
-As a user I want an interpretation based on my question and three cards so that the reading addresses my intent.
+As a user I want an updated interpretation after each card I draw so that the reading addresses my intent as it develops.
 
 **Acceptance Criteria**
 
-Given the user has entered question and drawn two cards,
-When the third card is drawn,
-Then the local Qwen runner must receive the question and three cards in draw order once,
-And the terminal must display the interpretation.
+Given the user has entered a non-blank question and has drawn fewer than three cards,
+When a card is successfully drawn,
+Then the local Qwen runner must be called exactly once,
+And it must receive the question and all cards drawn so far in draw order,
+And each card input must include its name and description loaded from `lib/data/cards.json`,
+And the runner must act as a tarot reading service that answers the question by interpreting the drawn cards,
+And the terminal must display the updated interpretation.
 
-Given the user has entered question and drawn two cards,
+Given a successful draw triggers the local model,
 When the local model fails,
 Then the system must display a clear error message,
 And the program should not crash or freeze.
