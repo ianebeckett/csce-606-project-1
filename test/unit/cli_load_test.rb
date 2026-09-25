@@ -50,16 +50,22 @@ class CLILoadTest < Minitest::Test
     id, output = invoke(:prompt_for_reading_id, choices, input: "  3  \n")
 
     assert_equal 3, id
-    assert_includes output, "Reading ID: 9 | #{@reading['saved_at']} | My question"
-    assert_includes output, "Reading ID: 3 | #{@reading['saved_at']} | Another question"
+    assert_includes output, "Reading ID: 9\nSaved at: #{@reading['saved_at']}\nQuestion: My question\n"
+    assert_includes output, "Reading ID: 3\nSaved at: #{@reading['saved_at']}\nQuestion: Another question\n"
     assert_includes output, 'Enter the reading ID to load (blank to cancel):'
   end
 
   def test_load_rejects_invalid_or_missing_ids_without_changing_history
     original = File.binread(@path)
-    %w[0 -1 1oops 99].each do |input|
+    expected_errors = {
+      '0' => 'Error: Please enter a positive reading ID number.',
+      '-1' => 'Error: Please enter a positive reading ID number.',
+      '1oops' => 'Error: Please enter a positive reading ID number.',
+      '99' => 'Error: ID 99 not found in saved readings. Please try again.'
+    }
+    expected_errors.each do |input, message|
       _result, output = invoke(:load, input: "#{input}\n")
-      assert_includes output, 'Could not load reading:'
+      assert_includes output, message
       refute_includes output, '[Session Initialized]'
     end
     assert_equal original, File.binread(@path)

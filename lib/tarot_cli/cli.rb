@@ -71,7 +71,7 @@ module TarotCLI
       return puts 'No saved readings found.' if readings.empty?
 
       id = prompt_for_reading_id(readings)
-      return unless id
+      return if id == :exit || !id
 
       resume_reading(store.load(id))
     rescue ReadingStore::Error, ArgumentError => e
@@ -88,13 +88,31 @@ module TarotCLI
 
     # Show saved IDs and reject partial numbers rather than selecting an unintended reading.
     def prompt_for_reading_id(readings)
-      readings.each { |reading| puts "Reading ID: #{reading['ID']} | #{reading['saved_at']} | #{reading['question']}" }
-      puts 'Enter the reading ID to load (blank to cancel):'
-      selection = gets&.strip
-      return if selection.nil? || selection.empty?
-      raise ReadingStore::Error, 'Enter a positive reading ID.' unless selection.match?(/\A[1-9]\d*\z/)
+      display_readings(readings)
+      valid_ids = readings.map { |reading| reading['ID'].to_i }
 
-      selection.to_i
+      loop do
+        puts 'Enter the reading ID to load (blank to cancel):'
+        selection = gets&.strip
+
+        return nil if selection.nil? || selection.empty?
+        return selection.to_i if valid_selection?(selection, valid_ids)
+      end
+    end
+
+    def valid_selection?(selection, valid_ids)
+      unless selection.match?(/\A[1-9]\d*\z/)
+        puts 'Error: Please enter a positive reading ID number.'
+        return false
+      end
+
+      id_integer = selection.to_i
+      unless valid_ids.include?(id_integer)
+        puts "Error: ID #{id_integer} not found in saved readings. Please try again."
+        return false
+      end
+
+      true
     end
 
     def show_draw_without_reading
@@ -139,6 +157,12 @@ module TarotCLI
       TEXT
     end
 
+    def display_readings(readings)
+      readings.each do |r|
+        display_reading(r)
+      end
+    end
+
     # Carry the chosen runner and save destination into every new reading.
     def start_session
       question = prompt_for_question
@@ -154,6 +178,11 @@ module TarotCLI
 
         puts 'Question cannot be blank.'
       end
+    end
+
+    def exit_with_statement
+      puts 'Returning to Main Menu...'
+      :exit
     end
 
     def unknown_command(command)
