@@ -5,6 +5,7 @@
     "id": 0,
     "name": "The Fool",
     "description": "The Fool shows a young, bright-eyed man stepping off the edge of a high cliff into the open air. He wears an ornate, colorful tunic and carries a small bindle or bag on a stick over his shoulder. In his other hand, he holds a white rose, showing innocence and purity. A small white dog leaps up at his heels, barking to warn him of the danger ahead. A bright yellow sun shines behind him, while rugged snow-capped mountains loom in the background.",
+    "meaning": "New beginnings, fresh start, spontaneity, living in the moment, trusting the universe. The Fool represents the pure potential of embarking on an unknown journey with optimism.",
     "art": [
       ".-------------------.",
       "|         0  *  *{  |",
@@ -32,6 +33,7 @@
     "id": 1,
     "name": "The Magician",
     "description": "The Magician stands confidently behind a wooden table, one arm raised toward the sky holding a wand, the other pointing down to the earth. On the table before him lie the four suit symbols: a cup, a sword, a pentacle, and a wand. He wears a white robe with a red mantle, and an infinity symbol floats above his head. Red roses and white lilies grow at his feet, and a lush garden fills the background under a clear sky.",
+    "meaning": "Manifestation, resourcefulness, inspired action. You have all the tools you need. The Magician represents the ability to turn ideas into reality through willpower and focus.",
     "art": [
       ".-------------------.",
       "|;´*`:´✿  I ´;`;✿:`:|",
@@ -59,6 +61,7 @@
     "id": 2,
     "name": "The High Priestess",
     "description": "The High Priestess sits serenely between two pillars—one black marked with the letter B, one white marked with the letter J—before a veil decorated with pomegranates. She wears flowing blue robes and a horned lunar crown, holding a partially concealed Torah scroll in her lap. A crescent moon rests at her feet, and the background is a deep blue expanse suggesting the night sky or water.",
+    "meaning": "Trust your intuition, look beneath the surface, silence is wisdom. The High Priestess represents the bridge between conscious and unconscious mind. Listen to your inner voice.",
     "art": [
       ".-------------------.",
       "|        II         |",
@@ -86,6 +89,7 @@
     "id": 3,
     "name": "The Empress",
     "description": "The Empress reclines on a luxurious throne amid a lush, fertile landscape of wheat fields, a flowing river, and dense forest. She wears a crown of twelve stars and flowing white robes patterned with pomegranates. A heart-shaped shield bearing the symbol of Venus rests near her, and she holds a scepter topped with a globe. Soft cushions and pillows surround her, emphasizing abundance and natural growth.",
+    "meaning": "Abundance, fertility, beauty, nurturing, connection to nature. The Empress embodies the Divine Feminine — creative abundance, growth, and nurturing energy.",
     "art": [
       ".-------------------.",
       "|        III        |",
@@ -113,6 +117,7 @@
     "id": 4,
     "name": "The Emperor",
     "description": "The Emperor sits upright on a massive stone throne decorated with ram heads, symbolizing Aries. He wears full red armor under a heavy cloak, a golden crown, and holds an ankh scepter in one hand and a golden orb in the other. Behind him rise stark, barren mountains under a clear sky, conveying structure, authority, and unyielding control.",
+    "meaning": "Authority, structure, discipline, stability, leadership. The Emperor represents order, rules, and the masculine principle of building solid foundations through discipline.",
     "art": [
       ".-------------------.",
       "|        IV         |",
@@ -140,6 +145,7 @@
     "id": 5,
     "name": "The Hierophant",
     "description": "The Hierophant sits on a throne between two gray stone pillars, wearing elaborate papal vestments and a triple crown. He raises his right hand in a blessing gesture while holding a triple cross scepter in his left. Two tonsured monks kneel before him. At his feet lie two crossed keys, and the background is a formal, temple-like setting of stone and ritual.",
+    "meaning": "Spiritual wisdom, tradition, conformity, education, guidance from institutions. The Hierophant represents established belief systems and traditional knowledge.",
     "art": [
       ".-------------------.",
       "|         V         |",
@@ -167,6 +173,7 @@
     "id": 6,
     "name": "The Lovers",
     "description": "A naked man and woman stand beneath a radiant angel who spreads protective wings above them. The woman is positioned near the Tree of Knowledge with a serpent coiled around it; the man stands near a tree of flames. Behind them rise a mountain and a bright sun. The scene is set in an open, paradisiacal landscape under a clear blue sky.",
+    "meaning": "Love, harmony, meaningful connections, choices aligned with values. The Lovers represent a crossroads where heart and values guide the decision.",
     "art": [
       ".-------------------.",
       "|         VI        |",
@@ -194,6 +201,7 @@
     "id": 7,
     "name": "The Chariot",
     "description": "A crowned warrior in armored robes stands inside a stone chariot decorated with moons and stars. He holds a wand rather than reins, while two sphinxes—one black, one white—pull the chariot forward. Behind him are city walls and a flowing river under a starry canopy of blue and gold. His expression is determined and focused.",
+    "meaning": "Willpower, determination, victory through focused effort, overcoming opposition. The Chariot represents triumph through discipline and control.",
     "art": [
       ".-------------------.",
       "|        VII        |",
@@ -221,6 +229,7 @@
     "id": 8,
     "name": "Strength",
     "description": "A serene woman in a white gown gently closes the jaws of a powerful lion with her bare hands. An infinity symbol floats above her head, and a garland of flowers crowns her. She stands in a calm landscape of green hills and a distant mountain under a clear sky, radiating quiet inner power rather than brute force.",
+    "meaning": "Inner strength, courage, compassion, patience, gentle control. True power comes from gentleness and inner fortitude, not domination.",
     "art": [
       ".-------------------.",
       "|        VIII       |",
@@ -248,6 +257,7 @@
     "id": 9,
     "name": "The Hermit",
     "description": "An elderly bearded man in a gray hooded cloak stands alone on a snowy mountain peak, holding a lantern that contains a glowing six-pointed star. In his other hand he grips a long staff. The background is barren and cold, emphasizing solitude, introspection, and the light of inner guidance against the darkness.",
+    "meaning": "Solitude, introspection, inner guidance, soul-searching. Sometimes the wisest choice is to withdraw and seek answers within.",
     "art": [
       ".-------------------.",
       "|         IX        |",
@@ -275,6 +285,7 @@
     "id": 10,
     "name": "Wheel of Fortune",
     "description": "A great golden wheel turns in the sky, inscribed with the letters TARO and alchemical symbols. On its rim climb a sphinx, a snake, and a jackal-headed figure. In the four corners of the card sit the winged creatures of Ezekiel—angel, eagle, lion, and bull—each holding an open book. Clouds swirl around the wheel against a blue sky.",
+    "meaning": "Change, cycles, destiny, karma, turning point. Life moves in cycles — what goes around comes around. Embrace change as a natural force.",
     "art": [
       ".-------------------.",
       "|         X         |",
@@ -302,6 +313,7 @@
     "id": 11,
     "name": "Justice",
     "description": "A crowned figure sits between two stone pillars, holding a double-edged sword upright in one hand and golden scales in the other. She wears a red robe over green and a square golden crown. A purple curtain hangs behind her, and her expression is calm, impartial, and clear-eyed.",
+    "meaning": "Justice, fairness, truth, cause and effect, legal matters. The scales must be balanced. Honesty and accountability will prevail.",
     "art": [
       ".-------------------.",
       "|  |      XI        |",
@@ -329,6 +341,7 @@
     "id": 12,
     "name": "The Hanged Man",
     "description": "A young man hangs upside down from a living wooden cross or T-shaped tree by one ankle, the other leg bent at the knee. His face is serene, and a golden halo of light surrounds his head. His arms are folded behind his back. The background is a muted landscape of hills and sky, conveying willing sacrifice and a shifted perspective.",
+    "meaning": "Pause, surrender, new perspective, letting go, sacrifice. Sometimes the best action is non-action. See the world from a different angle.",
     "art": [
       ".-------------------.",
       "|        XII        |",
@@ -356,6 +369,7 @@
     "id": 13,
     "name": "Death",
     "description": "A skeletal figure in black armor rides a white horse across a barren field, carrying a black banner marked with a white five-petaled rose. In the foreground lie a fallen king, a kneeling child, and a praying bishop. In the distance a rising sun appears between two towers, while a river flows through the scene.",
+    "meaning": "Transformation, endings leading to new beginnings, release of the old, metamorphosis. Death rarely means physical death — it represents profound inner change.",
     "art": [
       ".-------------------.",
       "|       XIII        |",
@@ -383,6 +397,7 @@
     "id": 14,
     "name": "Temperance",
     "description": "A winged angel with a calm face stands with one foot on land and one in water, pouring liquid between two golden cups. On the angel’s forehead is a golden triangle within a square. A path leads from the pool toward distant mountains under a radiant crown of light. Irises grow at the water’s edge.",
+    "meaning": "Balance, moderation, patience, finding middle ground, healing, flow. Life is about integration and harmony — bring opposing forces together.",
     "art": [
       ".-------------------.",
       "|        XIV        |",
@@ -410,6 +425,7 @@
     "id": 15,
     "name": "The Devil",
     "description": "A horned, bat-winged devil figure with a goat’s face and inverted pentagram on its forehead perches on a black pedestal. A naked man and woman stand chained by the neck to the pedestal, their tails ending in fire and fruit. The background is dark and smoky, emphasizing bondage, materialism, and shadow.",
+    "meaning": "Bondage, addiction, materialism, playfulness with dark edges. The chains are self-imposed. Recognize what holds you captive and reclaim your freedom.",
     "art": [
       ".-------------------.",
       "|        XV         |",
@@ -437,6 +453,7 @@
     "id": 16,
     "name": "The Tower",
     "description": "A tall stone tower is struck by a jagged bolt of lightning from a dark, stormy sky. Flames burst from the upper windows and roof as two figures fall headlong from the structure. A crown is toppled from the top of the tower. The background is black and chaotic, filled with falling debris and fire.",
+    "meaning": "Sudden upheaval, revelation, disruption, awakening. The Tower destroys false structures to make way for truth. Painful but necessary.",
     "art": [
       ".-------------------.",
       "|        XVI     /__|",
@@ -464,6 +481,7 @@
     "id": 17,
     "name": "The Star",
     "description": "A naked woman kneels at the edge of a pool, pouring water from two pitchers—one onto the land, one into the water. Above her shines a large eight-pointed star surrounded by seven smaller stars. An ibis stands in a tree in the background, and the landscape is calm under a clear night sky.",
+    "meaning": "Hope, inspiration, healing, renewal, serenity, purpose. After the storm comes peace. Trust in the universe and your path forward.",
     "art": [
       ".-------------------.",
       "|        XVII       |",
@@ -491,6 +509,7 @@
     "id": 18,
     "name": "The Moon",
     "description": "A full moon with a solemn face shines between two towers. A path winds from a pool where a crayfish crawls onto land, past a howling dog and wolf, toward the distant mountains. Drops of light or dew fall from the moon. The scene is nocturnal, mysterious, and slightly unsettling.",
+    "meaning": "Illusion, fear, anxiety, subconscious, uncertainty. Things are not as they seem. Trust your intuition but beware of deception and delusion.",
     "art": [
       ".-------------------.",
       "|        XVIII      |",
@@ -518,6 +537,7 @@
     "id": 19,
     "name": "The Sun",
     "description": "A radiant golden sun with a human face shines over a bright, open landscape. A naked child rides a white horse, holding a red banner, while sunflowers bloom along a low stone wall. The sky is clear and the mood is joyful, warm, and pure.",
+    "meaning": "Joy, success, vitality, celebration, confidence, achievement. The Sun is one of the most positive cards — happiness, success, and fulfillment await.",
     "art": [
       ".-------------------.",
       "|        XIX        |",
@@ -545,6 +565,7 @@
     "id": 20,
     "name": "Judgement",
     "description": "A winged angel blows a golden trumpet from the clouds, an upright cross banner attached to it. Below, naked figures of men, women, and children rise from open coffins or graves with arms raised in response. Mountains and a body of water form the background under a gray sky.",
+    "meaning": "Judgement, rebirth, inner calling, absolution, evaluation. A moment of reckoning — be honest with yourself and answer your inner calling.",
     "art": [
       ".-------------------.",
       "|        XX         |",
@@ -572,6 +593,7 @@
     "id": 21,
     "name": "The World",
     "description": "A dancing nude figure is wrapped in a flowing purple sash and holds two wands, enclosed within a large green laurel wreath. In the four corners appear the same four living creatures as on the Wheel of Fortune—angel, eagle, lion, and bull. The background is a clear sky of soft blues and whites, conveying completion and harmony.",
+    "meaning": "Completion, accomplishment, fulfillment, wholeness, integration. A major cycle ends successfully. You've reached your goal — celebrate and prepare for the next journey.",
     "art": [
       ".-------------------.",
       "|        XXI        |",
@@ -599,6 +621,7 @@
     "id": 22,
     "name": "Ace of Wands",
     "description": "A divine hand emerges from a cloud, firmly grasping a single wooden wand sprouting fresh green leaves. In the background stretch a fertile landscape of hills, a river, and a distant castle. The sky is clear, emphasizing pure creative potential and new beginnings in the element of fire.",
+    "meaning": "New creative spark, inspiration, fresh start, exciting opportunity. The Ace of Wands brings the fire of passion and the energy to start something new.",
     "art": [
       ".-------------------.",
       "|     *  *          |",
@@ -626,6 +649,7 @@
     "id": 23,
     "name": "Two of Wands",
     "description": "A man in a red robe stands on a castle battlement, holding a small globe in one hand while resting the other on a tall wand. A second wand is fixed to the wall beside him. He gazes out over a wide landscape of sea, hills, and distant mountains under a clear sky.",
+    "meaning": "Planning for the future, making decisions, discovery, leaving comfort zone. Your world is expanding and you must choose your path.",
     "art": [
       ".-------------------.",
       "|        II         |",
@@ -653,6 +677,7 @@
     "id": 24,
     "name": "Three of Wands",
     "description": "A figure stands with his back to the viewer on a cliff overlooking the sea, three tall wands planted firmly in the ground beside him. Ships sail on the water below. He wears a cloak and looks outward toward distant horizons under a golden sky.",
+    "meaning": "Expansion, progress, planning ahead, exploration. Your plans are gaining momentum — prepare for growth and new horizons.",
     "art": [
       ".-------------------.",
       "|        III        |",
@@ -680,6 +705,7 @@
     "id": 25,
     "name": "Four of Wands",
     "description": "Four tall wands form a celebratory arch decorated with flowers and fruit. In the foreground two women raise bouquets in greeting, while a festive crowd gathers near a castle in the background. The scene is bright, joyful, and filled with the sense of homecoming or celebration.",
+    "meaning": "Celebration, homecoming, harmony, stability, joy. A milestone reached — time to gather with loved ones and celebrate your accomplishments.",
     "art": [
       ".-------------------.",
       "|         IV        |",
@@ -707,6 +733,7 @@
     "id": 26,
     "name": "Five of Wands",
     "description": "Five young men brandish wooden wands in a chaotic, competitive melee. They appear to be sparring rather than fighting to the death, their movements energetic and somewhat playful. The background is an open field under a clear sky, conveying struggle, rivalry, and constructive conflict.",
+    "meaning": "Competition, conflict, rivalry, tension, disagreements. Healthy competition can push growth, but watch for unnecessary battles.",
     "art": [
       ".-------------------.",
       "|     *   V         |",
@@ -734,6 +761,7 @@
     "id": 27,
     "name": "Six of Wands",
     "description": "A victorious rider on a white horse holds a wand topped with a laurel wreath while wearing another wreath on his head. A crowd of supporters walks alongside, holding their own wands aloft. The scene is a triumphant procession through a landscape of trees and hills.",
+    "meaning": "Victory, recognition, praise, public success, confidence. Your hard work pays off and others acknowledge your achievements.",
     "art": [
       ".-------------------.",
       "|         VI *      |",
@@ -761,6 +789,7 @@
     "id": 28,
     "name": "Seven of Wands",
     "description": "A determined man stands on higher ground, defending himself with a wand against six others thrusting upward from below. He wears mismatched boots and an expression of fierce resolve. The background shows a green hillside under a cloudy sky, emphasizing defense of position.",
+    "meaning": "Defending your position, standing your ground, perseverance. You face opposition but have the strength and conviction to hold your position.",
     "art": [
       ".-------------------.",
       "|        VII        |",
@@ -788,6 +817,7 @@
     "id": 29,
     "name": "Eight of Wands",
     "description": "Eight wooden wands fly through the air like arrows, all pointed downward toward the earth. Below them stretches a peaceful landscape of a river, hills, and a distant house under a clear blue sky. The image conveys swift movement, messages, and rapid progress.",
+    "meaning": "Speed, rapid progress, action, momentum, swift change. Things are moving fast — stay focused and ride the momentum.",
     "art": [
       ".-------------------.",
       "|        VIII       |",
@@ -815,6 +845,7 @@
     "id": 30,
     "name": "Nine of Wands",
     "description": "A weary but vigilant man leans on a wand, his head bandaged, while eight other wands stand upright behind him like a defensive barrier. He looks over his shoulder with cautious readiness. The background is a grayish landscape suggesting ongoing struggle and resilience.",
+    "meaning": "Resilience, persistence, guarding boundaries, last stand. You're almost there — don't give up even if you're tired. One final push.",
     "art": [
       ".-------------------.",
       "|         IX        |",
@@ -842,6 +873,7 @@
     "id": 31,
     "name": "Ten of Wands",
     "description": "A man labors forward under the heavy burden of ten long wands carried across his back, obscuring his view. He walks toward a distant town or village. The sky is clear but the figure is bent with the weight of responsibility and overextension.",
+    "meaning": "Burden, overload, heavy responsibility, hard work. You're carrying too much — it's time to delegate or ask for help.",
     "art": [
       ".-------------------.",
       "|          X        |",
@@ -869,6 +901,7 @@
     "id": 32,
     "name": "Page of Wands",
     "description": "A young figure stands in a desert landscape holding a tall sprouting wand and gazing at it with curiosity. He wears a yellow tunic decorated with salamanders and a red feathered hat. Behind him stretch barren dunes and distant mountains under a bright sky.",
+    "meaning": "Enthusiasm, exploration, new ideas, creative spark, youthful energy. A fresh perspective and passion for something new.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -896,6 +929,7 @@
     "id": 33,
     "name": "Knight of Wands",
     "description": "A knight in armor decorated with salamanders charges forward on a rearing horse, holding a wand aloft. His cloak and the horse’s trappings are fiery red and yellow. The background is a desert landscape with pyramids, conveying passionate, impulsive energy.",
+    "meaning": "Adventure, action, impulsiveness, passion, bold moves. Charging toward your goals with fiery energy — but check before you leap.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -923,6 +957,7 @@
     "id": 34,
     "name": "Queen of Wands",
     "description": "A queen sits on a throne decorated with lions, holding a flowering wand in one hand and a sunflower in the other. A black cat sits at her feet. She wears a crown and flowing robes, and the background is a bright desert landscape with clear sky, radiating confidence and warmth.",
+    "meaning": "Confidence, charisma, warmth, boldness, creative leadership. Own your power with grace and inspire others through your passionate spirit.",
     "art": [
       ".-------------------.",
       "|     .--------.    |",
@@ -950,6 +985,7 @@
     "id": 35,
     "name": "King of Wands",
     "description": "A king sits on a throne adorned with lions and salamanders, holding a flowering wand. He wears a golden crown and red-and-yellow robes. A small salamander appears near his feet. The background is a clear desert sky, conveying leadership, vision, and fiery mastery.",
+    "meaning": "Natural-born leader, visionary, entrepreneur, bold decision-maker. The King of Wands leads with confidence, vision, and integrity.",
     "art": [
       ".-------------------.",
       "|           |     | |",
@@ -977,6 +1013,7 @@
     "id": 36,
     "name": "Ace of Cups",
     "description": "A divine hand emerges from a cloud holding an ornate golden cup from which five streams of water flow into a lotus-filled pond below. A dove descends toward the cup carrying a wafer. Lilies float on the water, and the scene is framed by soft clouds against a clear sky.",
+    "meaning": "New love, emotional awakening, compassion, overflowing feelings. The Ace of Cups opens the heart to receive and give love freely.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1004,6 +1041,7 @@
     "id": 37,
     "name": "Two of Cups",
     "description": "A young man and woman face each other, each holding a cup, their free hands almost touching. Above them floats the caduceus of Hermes topped by a lion’s head. The background is a gentle landscape of a house and hills under a clear sky, symbolizing partnership and mutual attraction.",
+    "meaning": "Partnership, mutual attraction, connection, unity, balanced love. A beautiful bond forms between two people who see each other clearly.",
     "art": [
       ".-------------------.",
       "|         II        |",
@@ -1031,6 +1069,7 @@
     "id": 38,
     "name": "Three of Cups",
     "description": "Three young women raise their cups in a joyful toast, dancing in a circle among abundant fruit and flowers. They wear flowing dresses of different colors and smile freely. The background is a fertile outdoor setting under a bright sky, celebrating friendship, community, and shared happiness.",
+    "meaning": "Celebration, friendship, community, joy, social gatherings. Good times with friends and loved ones — celebrate the bonds that nourish you.",
     "art": [
       ".-------------------.",
       "|         III       |",
@@ -1058,6 +1097,7 @@
     "id": 39,
     "name": "Four of Cups",
     "description": "A young man sits cross-legged beneath a tree, arms folded, gazing at three cups on the ground before him with apparent disinterest. A divine hand offers a fourth cup from a cloud, which he does not notice. The background is a quiet landscape of hills and sky.",
+    "meaning": "Apathy, contemplation, discontent, boredom. What's being offered isn't satisfying. Look inward to understand what you truly need.",
     "art": [
       ".-------------------.",
       "|        IV         |",
@@ -1085,6 +1125,7 @@
     "id": 40,
     "name": "Five of Cups",
     "description": "A cloaked figure stands with head bowed, mourning three overturned cups whose contents spill onto the ground. Two cups remain upright behind him. In the background a bridge leads across a river toward a distant castle or town under a gray sky.",
+    "meaning": "Loss, grief, regret, disappointment, focusing on what's lost. It's okay to grieve, but don't miss what remains — two cups are still standing.",
     "art": [
       ".-------------------.",
       "|         V         |",
@@ -1112,6 +1153,7 @@
     "id": 41,
     "name": "Six of Cups",
     "description": "A child in a white tunic offers a cup filled with white flowers to a smaller child. Four other flower-filled cups stand nearby. In the background are a cottage, a path, and a figure walking away. The scene is gentle and nostalgic under a soft sky.",
+    "meaning": "Nostalgia, childhood memories, innocence, happy reunions. Looking back with warmth — but remember to live in the present.",
     "art": [
       ".-------------------.",
       "|        VI         |",
@@ -1139,6 +1181,7 @@
     "id": 42,
     "name": "Seven of Cups",
     "description": "A silhouetted figure stands before seven cups floating in the clouds, each containing a different vision: a castle, jewels, a laurel wreath, a dragon, a serpent, a shrouded figure, and a human head. The cups are offered against a nebulous sky, representing choices and illusions.",
+    "meaning": "Choices, illusions, fantasies, many options, wishful thinking. So many possibilities but not all are real — separate dreams from delusions.",
     "art": [
       ".-------------------.",
       "|         VII       |",
@@ -1166,6 +1209,7 @@
     "id": 43,
     "name": "Eight of Cups",
     "description": "A cloaked figure walks away from eight carefully stacked cups, leaving them behind as he climbs toward a mountain range under a crescent moon. The landscape is barren and the figure’s posture suggests deliberate departure and emotional withdrawal.",
+    "meaning": "Walking away, disillusionment, leaving behind what no longer serves you. Courageously moving on in search of deeper meaning.",
     "art": [
       ".-------------------.",
       "|        VIII       |",
@@ -1193,6 +1237,7 @@
     "id": 44,
     "name": "Nine of Cups",
     "description": "A contented man sits on a wooden bench with arms crossed, smiling with satisfaction. Behind him, nine golden cups are arranged in an arc on a draped table. He wears a red hat and colorful clothing, and the background is a simple interior wall, conveying emotional fulfillment.",
+    "meaning": "Wish fulfillment, contentment, satisfaction, gratitude. The wish card — your dreams are manifesting. Enjoy this moment of abundance.",
     "art": [
       ".-------------------.",
       "|        IX         |",
@@ -1220,6 +1265,7 @@
     "id": 45,
     "name": "Ten of Cups",
     "description": "A happy couple stands with arms raised beneath a rainbow of ten golden cups. Two children dance nearby. In the background is a cozy house and green countryside under a bright sky, representing lasting emotional harmony and family joy.",
+    "meaning": "Divine love, emotional fulfillment, happy family, inner peace, complete joy. The ultimate card of emotional happiness and loving connections.",
     "art": [
       ".-------------------.",
       "|         X         |",
@@ -1247,6 +1293,7 @@
     "id": 46,
     "name": "Page of Cups",
     "description": "A young figure in a blue tunic decorated with fish stands by the sea, holding a cup from which a fish emerges. He looks at the fish with surprise and curiosity. Waves roll behind him under a soft sky, conveying emotional openness and intuitive messages.",
+    "meaning": "Intuitive messages, creative inspiration, new feelings, dreamy energy. Your inner child is speaking — listen with an open heart.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1274,6 +1321,7 @@
     "id": 47,
     "name": "Knight of Cups",
     "description": "A knight in ornate armor rides a white horse at a gentle pace, holding a cup carefully before him. His helmet is winged, and the horse’s reins are decorated. The background is a calm river landscape with distant hills, suggesting romantic, idealistic movement.",
+    "meaning": "Romance, charm, proposal, following your heart. A heartfelt invitation or creative pursuit arrives — follow your passion.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1301,6 +1349,7 @@
     "id": 48,
     "name": "Queen of Cups",
     "description": "A serene queen sits on a throne decorated with water motifs and mermaids, holding an ornate closed cup. She gazes into it contemplatively. Behind her stretches a calm sea under a soft sky, conveying deep empathy, intuition, and emotional receptivity.",
+    "meaning": "Compassion, emotional depth, intuition, nurturing, psychic awareness. The Queen of Cups leads with her heart and deep emotional intelligence.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1328,6 +1377,7 @@
     "id": 49,
     "name": "King of Cups",
     "description": "A king sits on a stone throne floating on the sea, holding a cup in one hand and a short scepter in the other. He wears a blue tunic and golden crown. A ship sails in the distance and a fish leaps from the water, conveying emotional mastery and calm authority.",
+    "meaning": "Emotional maturity, calm leadership, wisdom, diplomacy. The King of Cups masters his emotions without suppressing them.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1355,6 +1405,7 @@
     "id": 50,
     "name": "Ace of Swords",
     "description": "A divine hand emerges from a cloud grasping an upright double-edged sword crowned with a golden laurel wreath and palm branch. Six golden yods fall around the blade. The background is a stark mountain landscape under a clear sky, symbolizing pure mental clarity and breakthrough.",
+    "meaning": "Mental clarity, breakthrough idea, truth revealed, decisive action. A powerful moment of insight that cuts through confusion.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1382,6 +1433,7 @@
     "id": 51,
     "name": "Two of Swords",
     "description": "A blindfolded woman sits on a stone seat, holding two crossed swords across her chest. Behind her stretches a calm sea under a crescent moon. The scene is still and tense, conveying difficult decisions, stalemate, and the need for inner balance.",
+    "meaning": "Difficult decision, stalemate, blocked emotions, choosing between two options. You know the answer — remove the blindfold and see clearly.",
     "art": [
       ".-------------------.",
       "|        II         |",
@@ -1409,6 +1461,7 @@
     "id": 52,
     "name": "Three of Swords",
     "description": "A large red heart is pierced by three swords against a backdrop of heavy gray rain clouds. The image is stark and emotional, with no human figures, emphasizing heartbreak, sorrow, and the pain of truth or separation.",
+    "meaning": "Heartbreak, sorrow, grief, betrayal, painful truth. A piercing emotional wound — the pain is real, but it's also the beginning of healing.",
     "art": [
       ".-------------------.",
       "|        III        |",
@@ -1436,6 +1489,7 @@
     "id": 53,
     "name": "Four of Swords",
     "description": "A knight lies in repose on a tomb inside a church, hands folded in prayer on his chest, three swords hanging on the wall above and one lying beneath him. A stained-glass window shows a scene of devotion. The atmosphere is quiet, restful, and contemplative.",
+    "meaning": "Rest, recovery, meditation, mental pause. Your mind needs a break — step back, recharge, and restore your energy before moving forward.",
     "art": [
       ".-------------------.",
       "|         IV        |",
@@ -1463,6 +1517,7 @@
     "id": 54,
     "name": "Five of Swords",
     "description": "A smirking man gathers three swords while two defeated figures walk away with bowed heads, leaving their swords on the ground. Storm clouds gather over a choppy sea. The scene conveys hollow victory, conflict, and the aftermath of unfair advantage.",
+    "meaning": "Conflict, defeat, tension, win at all costs. You may win the battle but lose the war. Consider whether this fight is worth it.",
     "art": [
       ".-------------------.",
       "|         V ._ __.  |",
@@ -1490,6 +1545,7 @@
     "id": 55,
     "name": "Six of Swords",
     "description": "A ferryman poles a small boat carrying a cloaked adult and a child across calm water toward a distant shore. Six swords stand upright in the boat. The sky is gray but the destination appears peaceful, suggesting transition and moving away from difficulty.",
+    "meaning": "Transition, moving on, leaving behind troubled waters, journey toward peace. You're carrying wounds but moving toward calmer waters.",
     "art": [
       ".-------------------.",
       "|         VI        |",
@@ -1517,6 +1573,7 @@
     "id": 56,
     "name": "Seven of Swords",
     "description": "A figure sneaks away from a military camp, carrying five swords while two remain stuck in the ground behind him. He looks back over his shoulder with a sly expression. Tents and flags appear in the background under a yellow sky, conveying stealth and strategy.",
+    "meaning": "Deception, strategy, stealth, cunning. Be strategic but check your integrity. Someone may not be telling the whole truth.",
     "art": [
       ".-------------------.",
       "|        VII        |",
@@ -1544,6 +1601,7 @@
     "id": 57,
     "name": "Eight of Swords",
     "description": "A blindfolded woman stands bound and surrounded by eight upright swords stuck in the ground. She appears trapped, yet the bonds are loose and a path is visible. Behind her are a castle on a hill and a gray sky, conveying restriction that is partly self-imposed.",
+    "meaning": "Feeling trapped, self-imposed restrictions, negative thought patterns. The prison is in your mind — the bindings are loose enough to escape.",
     "art": [
       ".-------------------.",
       "|       VIII        |",
@@ -1571,6 +1629,7 @@
     "id": 58,
     "name": "Nine of Swords",
     "description": "A figure sits upright in bed, face buried in hands, under a dark tapestry decorated with roses and astrological symbols. Nine swords hang horizontally on the wall above. The scene is nocturnal and filled with anxiety, worry, and mental anguish.",
+    "meaning": "Anxiety, worry, fear, nightmares, overthinking. Your mind creates worst-case scenarios — things are rarely as bad as your fears suggest.",
     "art": [
       ".-------------------.",
       "|         IX        |",
@@ -1598,6 +1657,7 @@
     "id": 59,
     "name": "Ten of Swords",
     "description": "A figure lies face-down on the ground, pierced by ten swords along the spine. A black sky looms overhead, but a golden dawn breaks on the distant horizon over still water. The image is stark, conveying rock bottom and the end of a painful cycle.",
+    "meaning": "Rock bottom, painful ending, betrayal, crisis. The darkest moment just before dawn — things cannot get worse, only better from here.",
     "art": [
       ".-------------------.",
       "|         X         |",
@@ -1625,6 +1685,7 @@
     "id": 60,
     "name": "Page of Swords",
     "description": "A young figure stands on a windy hill holding a sword upright with both hands, looking alertly over one shoulder. Clouds race across the sky and trees bend in the wind. The posture is ready and watchful, conveying mental agility and curiosity.",
+    "meaning": "Curiosity, new ideas, mental agility, thirst for knowledge. A sharp mind eager to learn and communicate new discoveries.",
     "art": [
       ".-------------------.",
       "|                /\\ |",
@@ -1652,6 +1713,7 @@
     "id": 61,
     "name": "Knight of Swords",
     "description": "A knight in full armor charges forward on a galloping white horse, sword raised high. His expression is fierce and determined. Storm clouds fill the sky and the landscape is windswept, conveying rapid, decisive, and sometimes reckless mental action.",
+    "meaning": "Bold action, speed, ambition, charging ahead. Move with purpose and determination but don't let speed compromise your direction.",
     "art": [
       ".-------------------.",
       "|     |             |",
@@ -1679,6 +1741,7 @@
     "id": 62,
     "name": "Queen of Swords",
     "description": "A stern queen sits on a stone throne decorated with butterflies and clouds, holding an upright sword in one hand while extending the other. She wears a crown and flowing robes. The sky is clear with a few clouds, conveying clear judgment, independence, and sharp intellect.",
+    "meaning": "Clear thinking, direct communication, independence, truth-teller. The Queen of Swords sees through illusions and speaks the truth with clarity.",
     "art": [
       ".-------------------.",
       "|            .      |",
@@ -1706,6 +1769,7 @@
     "id": 63,
     "name": "King of Swords",
     "description": "A king sits upright on a stone throne carved with butterflies and moons, holding a sword upright. He wears a blue tunic and golden crown. Behind him are trees and a clear sky with a few clouds, conveying intellectual authority, truth, and decisive leadership.",
+    "meaning": "Truth, authority, ethical leadership, mental clarity, justice. Fair-minded leader who values truth and intellectual integrity above all.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1733,6 +1797,7 @@
     "id": 64,
     "name": "Ace of Pentacles",
     "description": "A divine hand emerges from a cloud holding a large golden pentacle. Below, a lush garden path leads through an archway of flowers and greenery toward distant mountains. The scene is abundant and grounded, symbolizing new material opportunity and prosperity.",
+    "meaning": "New financial opportunity, prosperity, seed money, new job, material beginning. A solid foundation for building wealth and security.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -1760,6 +1825,7 @@
     "id": 65,
     "name": "Two of Pentacles",
     "description": "A young man in a colorful tunic juggles two pentacles linked by an infinity loop while balancing on one foot. Ships sail on a choppy sea behind him. The sky is clear, conveying the need to balance multiple material or practical concerns with flexibility.",
+    "meaning": "Juggling priorities, balance, adaptability, managing resources. Life requires flexibility — keep the balls in the air without dropping what matters.",
     "art": [
       ".-------------------.",
       "|        II         |",
@@ -1787,6 +1853,7 @@
     "id": 66,
     "name": "Three of Pentacles",
     "description": "A stonemason works on a cathedral arch while a monk and a noble figure look on and consult plans. Three pentacles are carved into the architecture above. The scene is collaborative and skilled, set inside a Gothic structure, emphasizing craftsmanship and teamwork.",
+    "meaning": "Teamwork, collaboration, skilled work, apprenticeship. Great things are built together — share your skills and learn from others.",
     "art": [
       ".-------------------.",
       "|        III        |",
@@ -1814,6 +1881,7 @@
     "id": 67,
     "name": "Four of Pentacles",
     "description": "A crowned man sits rigidly on a stone seat, clutching a pentacle to his chest while two more rest under his feet and a fourth balances on his head. Behind him is a city skyline. His posture is closed and possessive, conveying control and material security.",
+    "meaning": "Financial security, saving, conservatism, holding tight. Security is important, but make sure your grip isn't preventing growth.",
     "art": [
       ".-------------------.",
       "|        IV         |",
@@ -1841,6 +1909,7 @@
     "id": 68,
     "name": "Five of Pentacles",
     "description": "Two impoverished figures—one on crutches—walk barefoot through falling snow past a brightly lit stained-glass church window showing five pentacles. They appear cold and left out. The scene is wintry and bleak, emphasizing hardship and temporary exclusion.",
+    "meaning": "Financial hardship, loss, feeling left out in the cold. Hard times are temporary — look for help outside which you haven't noticed.",
     "art": [
       ".-------------------.",
       "|         V         |",
@@ -1868,6 +1937,7 @@
     "id": 69,
     "name": "Six of Pentacles",
     "description": "A wealthy merchant in fine clothes holds scales in one hand while dropping coins into the outstretched hands of a kneeling beggar. Another figure kneels nearby. Six pentacles appear in the scene. The background is a town square, conveying generosity, charity, and balanced giving.",
+    "meaning": "Generosity, giving, receiving, charity, balance of resources. The flow of wealth is healthy when we give and receive in balance.",
     "art": [
       ".-------------------.",
       "|        VI         |",
@@ -1895,6 +1965,7 @@
     "id": 70,
     "name": "Seven of Pentacles",
     "description": "A farmer leans on his hoe, resting and surveying a bush heavy with seven golden pentacles. His posture suggests patient evaluation of progress. The background is a green field under a clear sky, conveying assessment of long-term effort and growth.",
+    "meaning": "Patience, assessment, long-term investment review. You've planted seeds — now step back and evaluate whether your efforts are bearing fruit.",
     "art": [
       ".-------------------.",
       "|        VII        |",
@@ -1922,6 +1993,7 @@
     "id": 71,
     "name": "Eight of Pentacles",
     "description": "A craftsman sits on a bench carefully engraving a pentacle, with seven finished ones displayed on a wooden post beside him. He is focused and diligent. The background shows a town and hills under a clear sky, emphasizing skill development and dedicated work.",
+    "meaning": "Diligence, craftsmanship, dedicated practice, mastery through repetition. Focus on honing your craft — excellence comes from consistent effort.",
     "art": [
       ".-------------------.",
       "|        VIII       |",
@@ -1949,6 +2021,7 @@
     "id": 72,
     "name": "Nine of Pentacles",
     "description": "A refined woman in an elegant gown stands in a lush vineyard, one hand resting on a hooded falcon, the other near nine golden pentacles growing on the vines. A snail moves at her feet. The scene is peaceful and abundant, conveying self-sufficiency and refined enjoyment of wealth.",
+    "meaning": "Luxury, financial independence, self-sufficiency, elegance. Your hard work has earned you comfort and abundance — enjoy the fruits of your labor.",
     "art": [
       ".-------------------.",
       "|         IX        |",
@@ -1976,6 +2049,7 @@
     "id": 73,
     "name": "Ten of Pentacles",
     "description": "An elderly man in a richly patterned robe sits with two dogs at his feet while a younger couple and a child stand nearby under an archway. Ten pentacles are arranged in the Tree of Life pattern across the card. A town is visible beyond the arch, conveying lasting family legacy and material security.",
+    "meaning": "Legacy, family wealth, long-term success, inheritance, tradition. Building something that lasts beyond yourself — wealth that spans generations.",
     "art": [
       ".-------------------.",
       "|         X         |",
@@ -2003,6 +2077,7 @@
     "id": 74,
     "name": "Page of Pentacles",
     "description": "A young figure stands in a green field holding a large golden pentacle with both hands, studying it intently. Flowers bloom at his feet and distant mountains rise under a clear sky. The posture is studious and grounded, conveying practical learning and new material opportunity.",
+    "meaning": "Ambition, learning, new financial opportunity, practical step. Ready to learn and build — start with the first small step toward your goal.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -2030,6 +2105,7 @@
     "id": 75,
     "name": "Knight of Pentacles",
     "description": "A knight in heavy armor sits solidly on a dark horse that stands still in a plowed field. He holds a pentacle before him and gazes at it steadily. The landscape is green and orderly under a clear sky, conveying methodical, reliable, and persistent effort.",
+    "meaning": "Methodical, reliable, hardworking, patient, duty-focused. Slow and steady wins the race — thorough effort leads to lasting results.",
     "art": [
       ".-------------------.",
       "|                   |",
@@ -2057,6 +2133,7 @@
     "id": 76,
     "name": "Queen of Pentacles",
     "description": "A queen sits on a throne decorated with fruit, goats, and angels, holding a large golden pentacle in her lap. A rabbit sits near her feet. Behind her is a lush garden and distant mountains under a clear sky, conveying nurturing abundance, practicality, and grounded care.",
+    "meaning": "Nurturing, practical, abundant, security-focused, earthy warmth. The Queen of Pentacles creates a warm, abundant home and manages resources wisely.",
     "art": [
       ".-------------------.",
       "|✿✿~ ~✿~    ~✿~ ~✿✿~|",
@@ -2084,6 +2161,7 @@
     "id": 77,
     "name": "King of Pentacles",
     "description": "A king sits on a throne carved with bulls and vines, holding a golden pentacle and a scepter. He wears a crown and richly embroidered robes. Grapes and greenery surround him, with a castle in the background under a clear sky, conveying material mastery, prosperity, and reliable leadership.",
+    "meaning": "Wealth, success, business leadership, abundance, generosity. The King of Pentacles has mastered the material world and shares his abundance.",
     "art": [
       ".-------------------.",
       "|                   |",

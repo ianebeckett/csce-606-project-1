@@ -143,7 +143,8 @@ consider their meanings.
 
 Given a card has been drawn in the current reading,
 When the user enters `describe <card name>`,
-Then the terminal must display that card's description from `cards.json`.
+Then the terminal must display that card's visual description and upright
+tarot meaning.
 
 Given a reading is active,
 When the user omits the name or selects an unknown, undrawn, or numeric card,

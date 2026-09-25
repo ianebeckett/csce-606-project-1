@@ -2,8 +2,8 @@
 
 require 'json'
 
-Card = Data.define(:id, :name, :description, :art) do
-  def initialize(id:, name:, description:, art: [])
+Card = Data.define(:id, :name, :description, :meaning, :art) do
+  def initialize(id:, name:, description:, meaning: nil, art: [])
     super
   end
 
@@ -18,6 +18,7 @@ Card = Data.define(:id, :name, :description, :art) do
         id: card_data['id'],
         name: card_data['name'],
         description: card_data['description'],
+        meaning: card_data.fetch('meaning'),
         art: card_data.fetch('art')
       )
     end
