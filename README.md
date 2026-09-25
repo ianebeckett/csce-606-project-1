@@ -78,8 +78,7 @@ reading active.
 ### describing a card
 
 After drawing a card, type `describe <card>` with its name to display its
-visual description and upright meaning. For example, use `describe The Fool`
-after drawing The Fool.
+description. For example, use `describe The Fool` after drawing The Fool.
 Names are matched without regard to letter case. Missing, unknown, undrawn,
 and numeric selections are rejected without ending the reading.
 
@@ -108,12 +107,11 @@ View the report by opening the file with a web browser.
 - Save readings to JSON with ordered cards, timestamps, and persistent history
 - Load a saved reading by ID and continue from its saved state
 - View a drawn card's illustration by name
-- Describe a drawn card's imagery and upright meaning by name
+- Describe a drawn card by name
 - Clean exit with `exit`, `quit`, or end-of-input
 
 ## known limitations
 
-- Reversed card meanings are not supported.
 - Card illustrations contain Unicode characters and require a UTF-8 terminal.
 - `help`, `exit`, and `quit` are treated as question text at the question prompt
   and ignored during an active reading ([#64](https://github.com/ianebeckett/csce-606-project-1/issues/64),
@@ -134,8 +132,3 @@ View the report by opening the file with a web browser.
 The 78 upright card illustrations in `lib/data/cards.json` come from
 [`lawreka/ascii-tarot`](https://github.com/lawreka/ascii-tarot/blob/c951f8e0ba3b03b670d8f97ae7ad660531f5ccaf/bin/cards.js).
 They are used under the MIT License in [`docs/ascii-tarot-LICENSE.txt`](docs/ascii-tarot-LICENSE.txt).
-
-## Card meaning source
-
-The 78 upright card meanings in `lib/data/cards.json` come from the
-[CC0 tarot card dataset](https://github.com/smallcat419/tarot-card-data/tree/b40718b33ea9de3a89dc65fc0e2c9a9a605e409e).

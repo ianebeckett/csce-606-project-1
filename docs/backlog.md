@@ -13,7 +13,6 @@
 - finalize docs/design.md
 
 ## In Progress
-- Add and test upright meanings for all 78 cards (#23)
 - Implement `describe <card>` by drawn card name and update documentation (#23)
 
 ## Done

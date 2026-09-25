@@ -103,7 +103,7 @@ module TarotCLI
       card = @deck.find_drawn_card(selection)
       return puts 'Could not describe card. Invalid card selection. Choose a drawn card.' unless card
 
-      puts "#{card.name}\n#{card.description}\nMeaning: #{card.meaning}"
+      puts "#{card.name}\n#{card.description}"
     end
 
     # Return to the menu only after saving succeeds, keeping a failed reading available to retry.
