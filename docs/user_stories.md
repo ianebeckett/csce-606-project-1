@@ -141,17 +141,14 @@ consider their meanings.
 
 **Acceptance Criteria**
 
-Given a card has been drawn or selected,
-When the user requests the details/meaning of that card,
-Then the terminal must print a comprehensive text description of its
-traditional tarot interpretation.
+Given a card has been drawn in the current reading,
+When the user enters `describe <card name>`,
+Then the terminal must display that card's description from `cards.json`.
 
-Given a card has been drawn or selected,
-When the user requests details for a card index or name that does not exist in
-the deck (e.g., entering 99 or typing The King of Potatoes),
-Then the system must reject the input,
-And display an error message stating e.g., "Invalid card selection. Please
-select a valid card.",
+Given a reading is active,
+When the user omits the name or selects an unknown, undrawn, or numeric card,
+Then the system must reject the input with "Could not describe card. Invalid
+card selection. Choose a drawn card.",
 And the program should not crash or freeze.
 
 ## Essential Sad Path

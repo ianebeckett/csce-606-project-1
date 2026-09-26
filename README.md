@@ -75,6 +75,13 @@ if you drew The Fool, use `view The Fool`. Names are matched without regard to
 letter case. An undrawn or invalid card displays an error and keeps the
 reading active.
 
+### describing a card
+
+After drawing a card, type `describe <card>` with its name to display its
+description. For example, use `describe The Fool` after drawing The Fool.
+Names are matched without regard to letter case. Missing, unknown, undrawn,
+and numeric selections are rejected without ending the reading.
+
 ## running tests
 
 ```bash
@@ -100,11 +107,11 @@ View the report by opening the file with a web browser.
 - Save readings to JSON with ordered cards, timestamps, and persistent history
 - Load a saved reading by ID and continue from its saved state
 - View a drawn card's illustration by name
+- Describe a drawn card by name
 - Clean exit with `exit`, `quit`, or end-of-input
 
 ## known limitations
 
-- Card details are not implemented yet.
 - Card illustrations contain Unicode characters and require a UTF-8 terminal.
 - `help`, `exit`, and `quit` are treated as question text at the question prompt
   and ignored during an active reading ([#64](https://github.com/ianebeckett/csce-606-project-1/issues/64),

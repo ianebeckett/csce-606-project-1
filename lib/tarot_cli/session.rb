@@ -13,11 +13,11 @@ module TarotCLI
     TEXT
 
     AVAILABLE_COMMANDS = <<~TEXT
-      Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+      Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
     TEXT
 
     COMMAND_HANDLERS = {
-      'draw' => :draw_card, 'details' => :not_implemented,
+      'draw' => :draw_card,
       'save' => :save, 'shuffle' => :shuffle,
       'help' => :show_usage,
       'new' => :non_session_command, 'review' => :non_session_command,
@@ -79,6 +79,7 @@ module TarotCLI
     def execute_command(command)
       name, selection = command.split(' ', 2)
       return view_card(selection) if name == 'view'
+      return describe_card(selection) if name == 'describe'
 
       handler = COMMAND_HANDLERS[command]
       return :exit if handler == :exit
@@ -96,6 +97,13 @@ module TarotCLI
     def view_card(selection)
       card = @deck.find_drawn_card(selection)
       puts(card ? card.ascii_art : 'Could not display art. Invalid card selection. Choose a drawn card.')
+    end
+
+    def describe_card(selection)
+      card = @deck.find_drawn_card(selection)
+      return puts 'Could not describe card. Invalid card selection. Choose a drawn card.' unless card
+
+      puts "#{card.name}\n#{card.description}"
     end
 
     # Return to the menu only after saving succeeds, keeping a failed reading available to retry.

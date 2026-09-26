@@ -32,7 +32,7 @@ The document will evolve with implementation and does not block unrelated coding
     - draws a random card when requested by the user
     - tracks which cards have been drawn and in what order
     - ensures that the same card is not drawn twice at the same time
-    - finds a drawn card by name for `view <card>`
+    - finds a drawn card by name for `view <card>` and `describe <card>`
     - restores ordered card names to deck objects, excluding them from future draws
 
 - Card
@@ -81,6 +81,8 @@ The document will evolve with implementation and does not block unrelated coding
 The View path is `view <card>` -> `Session` -> `Deck.find_drawn_card` ->
 `Card.ascii_art` -> terminal. The illustration is stored with the card in
 `cards.json`; no image download or model call occurs when viewing it.
+Describe follows `describe <card>` -> `Session` -> `Deck.find_drawn_card` ->
+`Card.description` -> terminal. It also uses only cards drawn in the active reading.
 
 The CLI owns the main menu, runner, and save path. Load follows this path:
 
@@ -182,9 +184,9 @@ User -> CLI -> Session --question, ordered card names, interpretation--> Reading
 
 ## User interface design: mock-ups, expected interactions/workflows
 
-The mock-ups show the intended full workflow. Card details and in-session
-exit are not implemented in the current checkout; see the README for the
-commands the grader can run now.
+The mock-ups show the intended full workflow. In-session exit is not
+implemented in the current checkout; see the README for commands the grader
+can run now.
 
 ### example UI: main menu
 ```
@@ -206,7 +208,7 @@ Available Commands:
 > help
 Usage Guidance:
   - Type 'new' to set an intention and begin drawing up to 3 cards.
-  - Type 'details [card_name]' during a session to read about its symbolism.
+  - Type 'describe [card_name]' during a session to read its description.
   - Type 'shuffle' during a session to clear the current state.
 
 >
@@ -225,7 +227,7 @@ Enter your intention or question for this session:
 Current Spread:
 ------------------------------------------------------------------------
 
-Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
 > draw
 
@@ -237,7 +239,7 @@ INTERPRETATION:
 The Tower points to disruption around your launch. Prepare for sudden changes
 and use them to identify foundations that need to be rebuilt.
 
-Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
 > view The Tower
 The Tower
@@ -272,15 +274,14 @@ INTERPRETATION:
 The Tower's disruption is followed by the Three of Wands, suggesting that
 careful planning and a wider view can turn early launch problems into progress.
 
-Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
-> details The Tower
-------------------------------------------------------------------------
-CARD DETAILS: The Tower
-Motifs: A lightning-struck fortress, crown falling, figures plunging.
-Meaning: Fundamental breakdowns, sudden revelation, destruction of
-         faulty foundations to make way for stable structures.
-------------------------------------------------------------------------
+> describe The Tower
+The Tower
+A tall stone tower is struck by a jagged bolt of lightning from a dark, stormy
+sky. Flames burst from the upper windows and roof as two figures fall headlong
+from the structure. A crown is toppled from the top of the tower. The background
+is black and chaotic, filled with falling debris and fire.
 ==================================================================================
 ```
 
@@ -301,12 +302,12 @@ complete fulfillment (The World). The launch will be chaotic at first,
 but an absolute victory in the end.
 ------------------------------------------------------------------------
 
-Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
 > draw
 [!] You have drawn the maximum limit of 3 cards.
 
-Available Commands: [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
 > save
 Session successfully saved to disk. Returning to Main Menu...
@@ -338,7 +339,7 @@ Enter your intention or question for this session:
 Current Spread:
 ------------------------------------------------------------------------
 
-Available Commands: [draw], [view <drawn card>], [details <card>], [save], [shuffle], [help], [exit]
+Available Commands: [draw], [view <drawn card>], [describe <drawn card>], [save], [shuffle], [help], [exit]
 
 > draw
 
@@ -391,14 +392,14 @@ before the next draw.
 order of earliest to latest, from left to right. The local Qwen runner is called
 once with the question and all cards drawn so far, and the updated interpretation
 is displayed.
-- If user has drawn at least one card, they may request to see details or art of any of the
+- If user has drawn at least one card, they may request to see the description or art of any of the
 drawn cards.
 - After a draw, `view <card>` accepts the drawn card's name and prints its
   illustration. A missing, unknown, or undrawn selection reports an error and
   leaves the current reading active.
-- If the user requests to see details of one of the drawn cards, they will be shown a
-statement explaining major motifs depicted on the card and their meanings independent of
-the session and question.
+- After a draw, `describe <card>` accepts the drawn card's name and prints its
+  description. Missing, unknown, undrawn, and numeric selections report an
+  error without ending the reading.
 - When the user draws their third card, the updated interpretation takes the question,
 all three cards, and their order into context.
 - If user has already drawn three cards, they will not be allowed to draw another card.
@@ -643,3 +644,10 @@ names. `view <card>` accepts a drawn card's displayed name, ignoring letter case
 Numeric card IDs are not accepted: the interface does not present them before
 selection, and their values do not identify a card meaningfully to the user.
 The terminal output starts with the card name and does not show a numeric ID.
+
+### Describe card description
+
+`describe <card>` prints the existing `Card.description` for a drawn card
+selected by name. The same description remains available to `QwenRunner`.
+Describe does not accept the card's internal ID or request a new model
+interpretation.

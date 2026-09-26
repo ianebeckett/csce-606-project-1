@@ -9,19 +9,14 @@
 
 ### Essential Features - Implementation
 
-### Optional Features - Implementation
-- write tests for view card details
-- implement view card details
-- write tests for card description
-- implement card description feature
-
 ### Final Deliverables
 - finalize docs/design.md
 
 ## In Progress
-- View card ASCII art (#24, PR #72)
+- Implement `describe <card>` by drawn card name and update documentation (#23)
 
 ## Done
+- View card ASCII art (#24, PR #72)
 - write tests for load session
 - implement load session, allowing tests to inject other filepaths
 - implement save session with timestamp (#15)
