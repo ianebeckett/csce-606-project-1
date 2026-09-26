@@ -95,7 +95,8 @@ module TarotCLI
         puts 'Enter the reading ID to load (blank to cancel):'
         selection = gets&.strip
 
-        return nil if selection.nil? || selection.empty?
+        return nil if selection.nil?
+        return exit_with_statement if selection.empty?
         return selection.to_i if valid_selection?(selection, valid_ids)
       end
     end
