@@ -42,6 +42,21 @@ class ReadingFlowTest < Minitest::Test
     assert_equal drawn_cards(output), reading['cards']
   end
 
+  def test_invalid_ids_can_be_retried_before_resuming_a_reading
+    store = TarotCLI::ReadingStore.new(path: @path)
+    store.save(question: 'My question', cards: ['The World', 'The Tower'], interpretation: 'Saved interpretation')
+
+    output = run_cli("load\n1oops\n99\n  1  \nexit\nhelp\nexit\n")
+
+    assert_includes output, 'Error: Please enter a positive reading ID number.'
+    assert_includes output, 'Error: ID 99 not found in saved readings. Please try again.'
+    assert_equal 3, output.scan('Enter the reading ID to load (blank to cancel):').size
+    assert_includes output, "Session successfully loaded.\nQuestion: My question\n"
+    assert_equal ['The World', 'The Tower'], drawn_cards(output)
+    assert_includes output, "INTERPRETATION:\nSaved interpretation\n"
+    assert_includes output, 'Usage: tarot [command]'
+  end
+
   private
 
   def run_cli(input, *responses)
