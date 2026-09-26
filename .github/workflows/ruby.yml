@@ -57,8 +57,8 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - name: Run all tests for combined coverage
-      run: bundle exec rake test
+    - name: Run integration tests
+      run: bundle exec rake test TEST='test/{integration/**/*_test.rb,cli_test.rb}'
 
   coverage:
     name: Coverage
